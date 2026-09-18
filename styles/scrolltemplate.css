@@ -1,0 +1,32 @@
+/* Navegadores modernos (Firefox, Chrome 121+, Safari 18.2+) */
+* {
+    scrollbar-width: thin;
+    /* 'thin' deixa a barra fina */
+    scrollbar-color: palevioletred transparent;
+    /* Polegar azul e trilho transparente */
+}
+
+/* WebKit (Chrome, Edge, Safari antigos) */
+*::-webkit-scrollbar {
+    width: 6px;
+    /* Largura ideal para ficar fina sem sumir */
+    height: 6px;
+    /* Altura para scroll horizontal */
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    /* Fundo totalmente transparente */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: palevioletred;
+    /* Cor do polegar (azul) */
+    border-radius: 4px;
+    /* Arredondamento proporcional */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: palevioletred;
+    /* Azul mais escuro ao passar o mouse */
+}
