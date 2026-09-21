@@ -8,9 +8,9 @@
 
 /* WebKit (Chrome, Edge, Safari antigos) */
 *::-webkit-scrollbar {
-    width: 6px;
+    width: 1px;
     /* Largura ideal para ficar fina sem sumir */
-    height: 6px;
+    height: 1px;
     /* Altura para scroll horizontal */
 }
 
