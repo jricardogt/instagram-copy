@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --background-color: #fcfdfd;
+    --texto-secundario: #a8aab4;
+    --texto-principal: #1c1e21;
+    --texto-azul: #4a5df9;
+    --texto-vermelho: #f5142a;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 50px;
+}
+
+#navigation img {
+    width: 150px;
+}
+
+#navigation div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+}
+
+#navigation a {
+    color: var(--texto-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#navigation #login {
+    padding: 15px 20px;
+    color: white;
+    background-color: var(--texto-azul);
+    border-radius: 5px;
+}
+
+#container {
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#profile {
+    width: 900px;
+    padding-top: 30px;
+    margin: 0 auto 50px;
+    border: 4px solid white;
+    border-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.096) 0 8px 24px;
+}
+
+#profile-imgs {
+    width: 800px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#profile-icon {
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 120px;
+    padding: 4px;
+    margin-top: 100px;
+    margin-left: 20px;
+    background: #833ab4;
+    background: linear-gradient(90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(253, 29, 29, 1) 50%,
+            rgba(252, 176, 69, 1) 100%);
+    border-radius: 50%;
+}
+
+#profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#profile-banner {
+    position: absolute;
+    z-index: 2;
+    width: 800px;
+    height: 150px;
+}
+
+#profile-banner img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#profile-content {
+    display: flex;
+    justify-content: end;
+    width: 95%;
+    height: 180px;
+    gap: 15px;
+}
+
+#profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    height: 100%;
+    gap: 16px;
+}
+
+#profile-details--names {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    gap: 10px;
+}
+
+#profile-details--names h1 {
+    color: var(--texto-principal);
+    font-size: 33px;
+    font-weight: bolder;
+}
+
+#profile-details--names p {
+    color: var(--texto-azul);
+}
+
+#profile-details--follows {
+    display: flex;
+    width: 90%;
+    gap: 20px;
+}
+
+#profile-details--follows p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#profile-details--follows p span {
+    color: var(--texto-principal);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#profile-details--desc {
+    max-width: 90%;
+    max-height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#profile-details--desc p {
+    color: var(--texto-principal);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#profile-details--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 130px;
+    height: 50px;
+    gap: 20px;
+}
+
+#profile-details--buttons a {
+    text-decoration: none;
+}
+
+#profile-details--buttons i {
+    color: var(--texto-principal);
+    font-size: 20px;
+}
+
+#profile-details--buttons .fi-rr-following {
+    color: var(--texto-vermelho);
+}
+
+#profile-details--buttons i:hover {
+    color: var(--texto-azul);
+    cursor: pointer;
+}
+
+#highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 140px;
+    margin: 0 auto;
+    gap: 25px;
+    overflow-x: auto;
+    border: 4px solid white;
+    border-radius: 90px;
+    box-shadow: rgba(149, 157, 165, 0.096) 0 8px 24px;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 120px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.highlight div img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.highlight p {
+    color: var(--texto-principal);
+    font-size: 13px;
+}
+
+#posts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    max-width: 1360px;
+    padding: 20px;
+    margin: 0 auto;
+    gap: 18px;
+    border: 4px solid white;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.096) 0 8px 24px;
+}
+
+.post {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 13px;
+    transition: transform 0.3s ease;
+}
+
+.post img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.post:hover {
+    transform: scale(1.30);
+    border: 3px solid white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
