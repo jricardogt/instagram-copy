@@ -45,6 +45,7 @@ main {
     color: var(--texto-principal);
     font-weight: bold;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 
 #navigation #login {
@@ -52,6 +53,19 @@ main {
     color: white;
     background-color: var(--texto-azul);
     border-radius: 5px;
+
+}
+
+#navigation #login:hover {
+    background-color: var(--background-color);
+    color: var(--texto-azul);
+    border: 1px solid var(--texto-azul);
+}
+
+#navigation #cadastro:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color: #4a5df9;
 }
 
 #container {
@@ -67,8 +81,7 @@ main {
 
 #profile {
     width: 900px;
-    max-width: 900px;
-    height: 370px;
+    height: 400px;
     padding-top: 30px;
     margin: 0 auto;
     border: 4px solid white;
@@ -76,20 +89,49 @@ main {
     box-shadow: rgba(149, 157, 165, 0.096) 0 8px 24px;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+
 }
 
-#profile-phrase {
-    color: var(--texto-secundario);
-    font-style: italic;
-    font-size: 13px;
-    max-width: 500px;
-    max-height: 1em;
-    text-align: center;
+
+#container-pills {
+    width: 90%;
     margin: 0 auto;
-    margin-bottom: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pill {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.pill i {
+    font-size: 15px;
+    color: var(--texto-secundario);
+}
+
+.pill p {
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.pill:hover {
+    padding: 15px;
+    cursor: pointer;
+
 }
 
 #profile-imgs {
@@ -234,9 +276,9 @@ main {
 }
 
 #profile-details--buttons i:hover {
+    transition-duration: 0.4s;
     color: var(--texto-azul);
     cursor: pointer;
-
 }
 
 #highlights {
@@ -270,11 +312,13 @@ main {
     object-fit: cover;
     border: 3px solid white;
     border-radius: 50%;
+    transition-duration: 0.4s;
 }
 
 .highlight div img:hover {
     width: 85px;
     height: 85px;
+    cursor: pointer;
 }
 
 .highlight p {
@@ -305,6 +349,7 @@ main {
     overflow: hidden;
     border-radius: 13px;
     transition: transform 0.3s ease;
+    transition-duration: 0.4s;
 }
 
 .post img {
